@@ -2,11 +2,11 @@ const max_builders   = 1;
 const max_harvesters = 4;
 const max_upgraders  = 2;
 
-var spawnReplicate = {
-    
-    /** @param {Creep} creep **/
-    replicate: function() {
-        
+var buildingSpawn = {
+
+    /** @param {Creep} creep 3**/
+    replicate: function(spawn) {
+
         // Unit Replication
         //##################
         // harvester init
@@ -18,7 +18,7 @@ var spawnReplicate = {
         // builder init
         var builders       = _.filter(Game.creeps,   function(creep){ return creep.memory.role === 'builder';});
         var builderNames   = [];  _.each(builders,   function(creep){builderNames.push(creep.name);});
-        
+
         // SIMPLY FOR PRINTING
         harvesterprint = [];
         _.each(harvesters,function(creep){harvesterprint.push("  "+creep.name + "::" +creep.ticksToLive);});
@@ -29,7 +29,7 @@ var spawnReplicate = {
         console.log("Harvesters: "+harvesters.length+"/"+max_harvesters+" >> "+harvesterprint.sort());
         console.log("Upgraders:  "+upgraders.length+"/"+max_upgraders+" >> "+upgraderprint.sort());
         console.log("Builders:   "+builders.length+"/"+max_builders+" >> "+builderprint.sort());
-        
+
         if(harvesters.length < max_harvesters){
             console.log("Trying to make a harvester")
             for(var i = 1;i<=max_harvesters;i++){
@@ -63,4 +63,4 @@ var spawnReplicate = {
     }
 };
 
-module.exports = spawnReplicate;
+module.exports = buildingSpawn;
