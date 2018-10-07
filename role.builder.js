@@ -41,21 +41,21 @@ var roleBuilder = {
                   return (structure.structureType == STRUCTURE_EXTENSION) && structure.energy == structure.energyCapacity;
               }
           });
-          if(creep.room.storage.store[RESOURCE_ENERGY]>0){
-              if(creep.withdraw(creep.room.storage, RESOURCE_ENERGY,50) == ERR_NOT_IN_RANGE) {
-                  creep.moveTo(creep.room.storage);
-              }
-          }else if(targets){
-              if(creep.withdraw(targets[0], RESOURCE_ENERGY,50) == ERR_NOT_IN_RANGE) {
-                  creep.moveTo(targets[0]);
-              }
-
-          }else{
+          // if(creep.room.storage.store[RESOURCE_ENERGY]>0){
+          //     if(creep.withdraw(creep.room.storage, RESOURCE_ENERGY,50) == ERR_NOT_IN_RANGE) {
+          //         creep.moveTo(creep.room.storage);
+          //     }
+          // }else if(targets){
+          //     if(creep.withdraw(targets[0], RESOURCE_ENERGY,50) == ERR_NOT_IN_RANGE) {
+          //         creep.moveTo(targets[0]);
+          //     }
+          //
+          // }else{
               var sources = creep.room.find(FIND_SOURCES);
               if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
                   creep.moveTo(sources[0]);
               }
-          }
+          // }
       }
   },
   doRoad: function(from, to){
