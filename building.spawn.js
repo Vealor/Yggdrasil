@@ -1,4 +1,4 @@
-const max_builders   = 1;
+const max_builders   = 4;
 const max_harvesters = 4;
 const max_upgraders  = 2;
 
