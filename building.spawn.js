@@ -34,8 +34,8 @@ var buildingSpawn = {
             console.log("Trying to make a harvester")
             for(var i = 1;i<=max_harvesters;i++){
                 if(harvesterNames.indexOf("Harvester"+i) == -1){
-                    Game.spawns.Yggdrasil.createCreep( [WORK, CARRY, MOVE], 'Harvester'+i, { role: 'harvester' } );
-                    // Game.spawns.Yggdrasil.createCreep( [WORK, WORK, CARRY, MOVE], 'Harvester'+i, { role: 'harvester' } );
+                    // Game.spawns.Yggdrasil.createCreep( [WORK, CARRY, MOVE], 'Harvester'+i, { role: 'harvester' } );
+                    Game.spawns.Yggdrasil.createCreep( [WORK, WORK, CARRY, MOVE], 'Harvester'+i, { role: 'harvester' } );
                     // Game.spawns.Yggdrasil.createCreep( [WORK, WORK, WORK, WORK, CARRY, MOVE, MOVE, MOVE], 'Harvester'+i, { role: 'harvester' } );
                 }
             }
@@ -43,8 +43,8 @@ var buildingSpawn = {
             console.log("Trying to make an upgrader")
             for(var i = 1;i<=max_upgraders;i++){
                 if(upgraderNames.indexOf("Upgrader"+i) == -1){
-                    Game.spawns.Yggdrasil.createCreep( [WORK, CARRY, MOVE], 'Upgrader'+i, { role: 'upgrader' } );
-                    // Game.spawns.Yggdrasil.createCreep( [WORK, WORK, CARRY, MOVE], 'Upgrader'+i, { role: 'upgrader' } );
+                    // Game.spawns.Yggdrasil.createCreep( [WORK, CARRY, MOVE], 'Upgrader'+i, { role: 'upgrader' } );
+                    Game.spawns.Yggdrasil.createCreep( [WORK, WORK, CARRY, MOVE], 'Upgrader'+i, { role: 'upgrader' } );
                     // Game.spawns.Yggdrasil.createCreep( [WORK, WORK, CARRY, CARRY, CARRY, MOVE, MOVE], 'Upgrader'+i, { role: 'upgrader' } );
                 }
             }
@@ -52,8 +52,8 @@ var buildingSpawn = {
             console.log("Trying to make a builder")
             for(var i = 1;i<=max_builders;i++){
                 if(builderNames.indexOf("Builder"+i) == -1){
-                    Game.spawns.Yggdrasil.createCreep( [WORK, CARRY, MOVE], 'Builder'+i, { role: 'builder' } );
-                    // Game.spawns.Yggdrasil.createCreep( [WORK, WORK, CARRY, MOVE], 'Builder'+i, { role: 'builder' } );
+                    // Game.spawns.Yggdrasil.createCreep( [WORK, CARRY, MOVE], 'Builder'+i, { role: 'builder' } );
+                    Game.spawns.Yggdrasil.createCreep( [WORK, WORK, CARRY, MOVE], 'Builder'+i, { role: 'builder' } );
                     // Game.spawns.Yggdrasil.createCreep( [WORK, WORK, CARRY, CARRY, CARRY, MOVE, MOVE], 'Builder'+i, { role: 'builder' } );
                 }
             }
