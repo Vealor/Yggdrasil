@@ -92,8 +92,8 @@ Room.prototype.runCreeps = function() {
 Room.prototype.runStructures = function() {
   var structures = this.room.find(FIND_MY_STRUCTURES);
   for (var i in structures) {
-    if (structure.structureType === 'tower') {
-      buildingTower.action(structure);
+    if (structures[i].structureType === 'tower') {
+      // buildingTower.action(structures[i]);
     }
   }
 };
