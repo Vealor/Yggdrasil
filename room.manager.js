@@ -7,9 +7,9 @@ var scouted = {}
 
 RoomManager.add = function(room) {
   if (room.isOwned){
-    owned.push(room)
+    owned[room.name] = room
   } else {
-    scouted.push(room)
+    scouted[room.name] = room
   }
 };
 
