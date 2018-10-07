@@ -75,7 +75,7 @@ Room.prototype.runCreeps = function() {
   for(var name in creeps) {
     var creep = creeps[name];
 
-    roleAll.buildroad(creep);
+    roleBase.buildroad(creep);
 
     if(creep.memory.role == 'harvester') {
       roleHarvester.run(creep);
